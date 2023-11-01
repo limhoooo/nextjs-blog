@@ -15,7 +15,7 @@ const Hero = () => {
       />
       <h2 className="text-3xl font-bold mt-2">{"Hi, I'm Ho"}</h2>
       <h3 className="text-xl font-semibold">{"Front-End Engineer"}</h3>
-      <p>함께 성장해나가며 즐기는 개발자 임호</p>
+      <p>함께 성장해나가며 즐기는 개발자 임호입니당</p>
       <Link href="/contact">
         <button className="bg-yellow-500 font-bold rounded-xl py-1 px-4 mt-2">
           Contact me
