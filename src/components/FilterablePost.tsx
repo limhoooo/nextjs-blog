@@ -1,11 +1,11 @@
 "use client";
-import { TypePost } from "@/service/posts";
+import { Post } from "@/service/posts";
 import React, { useState } from "react";
 import PostsGrid from "./PostsGrid";
 import Categoires from "./Categories";
 
 type Props = {
-  posts: TypePost[];
+  posts: Post[];
   categories: string[];
   children: React.ReactNode;
 };

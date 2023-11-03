@@ -1,10 +1,10 @@
-import { TypePost } from "@/service/posts";
+import { Post } from "@/service/posts";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
 type Props = {
-  post: TypePost;
+  post: Post;
 };
 export default function PostCard({
   post: { title, description, date, category, path },
