@@ -17,3 +17,4 @@ https://limhoooo-nextjs-blog.vercel.app/
 - react-syntax-highlighter <br>
 - nodemailer <br>
 - Webpack <br>
+- vercel <br>
