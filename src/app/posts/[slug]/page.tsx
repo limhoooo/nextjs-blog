@@ -1,6 +1,7 @@
 import AdjacentPostCard from "@/components/AdjacentPostCard";
 import PostContent from "@/components/PostContent";
-import { getPostData } from "@/service/posts";
+import { getFeaturedPosts, getPostData } from "@/service/posts";
+import { Metadata } from "next";
 import Image from "next/image";
 import React from "react";
 type Props = {
@@ -8,12 +9,23 @@ type Props = {
     slug: string;
   };
 };
-// export async function generateStaticParams() {
-//   const posts = await getAllPosts();
-//   return posts.map((item) => ({
-//     slug: item.path,
-//   }));
-// }
+
+export async function generateMetadata({ params: { slug } }: Props) {
+  const { title, description } = await getPostData(slug);
+  return {
+    title,
+    description,
+  };
+}
+
+// Featured post 만 SSG 처리
+export async function generateStaticParams() {
+  const posts = await getFeaturedPosts();
+  return posts.map((post) => ({
+    slug: post.path,
+  }));
+}
+
 export default async function PostPage({ params: { slug } }: Props) {
   const post = await getPostData(slug);
   const { title, path, next, prev } = post;
