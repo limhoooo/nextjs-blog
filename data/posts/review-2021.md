@@ -1,34 +1,34 @@
-## 2021 Year Review!
+# Flux 패턴이란
 
-- Employee’s basic information. For identification and analysis purposes, it is also important that you add a section where the employee’s basic information can be written, including their name, ID, and position in the company.
-  Review period. To streamline the entire annual review process, it is critical that you add a section that states the period for which the review is being conducted.
-- Tasks to be evaluated. This is the main section of the annual review template, so mention all the yearly goals for which the employee is being evaluated.
-  Performance score rating. For each task mentioned earlier, make sure you leave adequate space where the reviewer can rate the employee's quality of work. You can do this through a 5-star review system, Likert scale or even by adding an empty box where reviewers can describe their evaluation. Some of
+흔히 Redux 와 Vuex 에서 사용하는 디자인패턴이다.  
+그래서 Flux 패턴이 뭔데?
 
-## What Is an Annual Review?
+## 등장배경
 
-An annual review, or a year-end review, is the process of evaluating employee performance over the past year. Annual reviews are typically done by managers, but can also be self-conducted.
+MVC (Model, View, Controller) 패턴의 단점을 보완하고 대규모 애플리케이션에서 데이터 흐름을 일관성 있게 관리함으로써 프로그램의 예측가능성을 높이기위함
 
-Generally, an annual performance assessment includes:
+## 구조
 
-Tracking employee KPIs
-Identifying employee's strengths and weaknesses
-Measuring employee quality of work
-Providing feedback on potential areas of improvement
-Needless to say, an annual review is a critical part of any successful business.
+### Action
 
-It helps businesses identify high-performing employees, boost employee engagement, relay expectations, and help foster a progressive environment of growth and progress.
+사용자 측에서 Action의 Type 과 새로운 데이터 payload 를 묶어서
+dispatcher 에 전달하는 역할
 
-On the other hand, employees can also use this time to communicate their future expectations to the company; be it their next year's KPIs, personal goals, monetary compensation, bonus structure breakdown, or expected promotions.
+```
+store.dispatch({ type: 'ADD_TODO', payload: inputValue });
+dispatch({ type: 'LOGIN', payload: { userName: cookieValue } });
+```
 
-At the end of an annual review, managers evaluate whether the company's future goals align with employees' objectives, and decide if they should be recommended for a raise or promotion in the coming year.
+### Dispatcher
 
-## How to Write a Year-End Review
+데이터들의 중앙허브 라고 할 수있다.
+Dispatcher는 들어오는 Action 객체 정보를 받아 실제로 어떤 행동을 할지 결정하는 곳이다.
 
-When it comes to preparing for a year-end review, there isn’t any one-size-fits-all approach.
+### Store
 
-This is majorly due to the type of industry you’re in, and the fact that every employee has unique goals for which they’re being evaluated. But that doesn't mean that you can’t create a generic layout for all performance reviews.
+Store는 애플리케이션의 모든 상태와 관련 로직을 가지고 있다.
+Store의 state 변경이 완료가 되면 View에 상태가 변경 했다는 것을 알려준다.
 
-In this section, we look at some of the most common sections you can add to your annual review templates:
+### view
 
-Header. The header is the first thing that the reviewer and reviewee will notice on the annual review document, so it's a good idea to add your company’s name, logo and branding to give it an overall professional outlook. In Visme, you can upload your logo with a few clicks and add it to any project.
+Flux의 View는 화면에 나타내는 것 뿐만이나라, 자식 View로 데이터를 흘려 보내는 뷰 컨트롤러의 역할도 함께 한다.

@@ -70,5 +70,21 @@
     "category": "my story",
     "path": "review-2023",
     "featured": true
+  },
+  {
+    "title": "Flux 패턴이란?",
+    "description": "Flux 패턴이용한 Redux를 구현해보자 (Vanilla jS, React js)",
+    "date": "2023-12-31",
+    "category": "frontend",
+    "path": "flux",
+    "featured": true
+  },
+  {
+    "title": "iterable 이란?",
+    "description": "iterable, iterator 에 대해서 알아보자",
+    "date": "2023-12-31",
+    "category": "frontend",
+    "path": "iterable",
+    "featured": true
   }
 ]
