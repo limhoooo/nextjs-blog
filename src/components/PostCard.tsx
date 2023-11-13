@@ -19,7 +19,7 @@ export default function PostCard({
           width={300}
           height={300}
         />
-        <div className="flex flex-col items-center p-4">
+        <div className="flex flex-col items-center p-4 ">
           <time className="self-end text-gray-700 max-md:hidden">
             {date.toString()}
           </time>

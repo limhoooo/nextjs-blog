@@ -1,14 +1,18 @@
-import { getNonFeaturedPosts } from "@/service/posts";
+import { getAllPosts } from "@/service/posts";
 import React from "react";
 import PostCard from "./PostCard";
 import MultiCarousel from "./MultiCarousel";
+import SectionHeader from "./text/SectionHeader";
 
 export default async function CarouselPosts() {
-  const posts = await getNonFeaturedPosts();
+  const posts = await getAllPosts();
 
   return (
     <section className="my-4">
-      <h2 className="text-2xl font-bold my-2">You May Like</h2>
+      <SectionHeader
+        sectionTitle="Posting"
+        descTitle="개발관련 내용들을 포스팅 합니다."
+      />
       <MultiCarousel>
         {posts.map((post) => (
           <PostCard key={post.path} post={post} />
