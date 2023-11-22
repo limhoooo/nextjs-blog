@@ -14,7 +14,7 @@ const Header = () => {
   const pathname = usePathname();
   const [menuIndex, setMenuIndex] = useState(0);
   const menuBoxTranslate = menu.map(
-    (_, index) => `translate-x-[${index * 60}px]`
+    (_, index) => `translateX(${index * 60}px)`
   );
   const activeMenuBoxClass = menuBoxTranslate[menuIndex];
   const menuHover = (index: number) => {
@@ -46,7 +46,8 @@ const Header = () => {
         </ul>
         <div
           aria-label="active menu bar"
-          className={`w-12 h-1 bg-orange transition  ${activeMenuBoxClass}`}
+          className={`w-12 h-1 bg-orange transition `}
+          style={{ transform: `${activeMenuBoxClass}` }}
         ></div>
       </nav>
     </header>
