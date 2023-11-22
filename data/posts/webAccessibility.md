@@ -71,7 +71,7 @@ HTML에서는 이를 대체 텍스트라고 한다. 이러한 설명은 **스크
 
 #### alt 속성 넣기
 
-```
+```jsx
 <img alt="강아지 사진" src="./image.png" />
 <video src="my-video.mp4" alt="강아지들이 뛰어노는 동영상"></video>
 ```
@@ -98,7 +98,7 @@ WAI-ARIA 는 ARIA States and Properties 속성과 ARIA Roles 속성을 이용하
 
 #### ARIA States and Properties 이용하기
 
-```
+```jsx
 <li tabindex="0" class="checkbox" role="checkbox" checked aria-checked="true">
   Receive promotional offers
 </li>
@@ -115,7 +115,7 @@ MDN : [https://www.w3.org/TR/aria-in-html/#bib-HTML51](https://www.w3.org/TR/ari
 role은 말 그대로 해당 태그가 어떤 역할을 수행하는지 알려주는 속성이다.  
 스크린리더를 이용하는 시각장애인들에게 해당요소가 어떤 요소인지 알려주는 속성이다.
 
-```
+```jsx
 <div class="snackbar" role="alert">
   <img src="apple.jpg" alt="사과 이미지" />
 </div>
