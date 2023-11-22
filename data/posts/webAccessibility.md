@@ -6,31 +6,27 @@
 ## 접근성이 왜 중요할까?
 
 > 웹 접근성은 능력이나 장애에 관계없이 모든 사람이 웹에 접근해서 사용할 수 있도록 보장하기 때문에 중요하다.  
->  또한 정보와 기술에 대한 장벽을 제거하여 포용성, 다양성, 평등을 증진하는 데에도 도움이 됩니다  
->  라고 설명을 하긴 하지만.. 크게 와닿지 않는다.  
-> 해외같은 경우 웹 접근성을 지키지 않는다면 어마무시한 벌금을 낸다고 한다.
-> 만약 해당 프로젝트가 해외 수출을 하게될때 접근성을 지키지 않는다면 무슨일이 벌어지게될까..  
-> 우리나라도 잘 지켜지진 않지만 웹 접근성을 지키지 않으면 해당 기관 또는 사업주에게 권고 후 벌금을 낼수도있고  
-> 손해배상 청구를 했던 사례도 존재한다.
+> 또한 정보와 기술에 대한 장벽을 제거하여 포용성, 다양성, 평등을 증진하는 데에도 도움이 됩니다
+
+라고 설명을 하긴 하지만.. 크게 와닿지 않는다. 해외같은 경우 웹 접근성을 지키지 않는다면 어마무시한 벌금을 낸다고 한다. 만약 해당 프로젝트가 해외 수출을 하게될때 접근성을 지키지 않는다면 무슨일이 벌어지게될까.. 우리나라도 잘 지켜지진 않지만 웹 접근성을 지키지 않으면 해당 기관 또는 사업주에게 권고 후 벌금을 낼수도있고 손해배상 청구를 했던 사례도 존재한다.
 
 ## 그래서 어떻게 하는건데
 
-### 1. 시멘틱 태그(Semantic Tag) 사용
+### 1\. 시멘틱 태그(Semantic Tag) 사용
 
 HTML 태그는 사용하는 용도 및 의미에 따라서 각각의 태그가 존재한다.  
-페이지의 콘텐츠와 구조에 맞는 태그를 이용해서 즉 시맨틱 하게 HTML 태그를 사용하자.
+페이지의 콘텐츠와 구조에 맞는 태그를 이용해서 즉 시맨틱 하게 HTML 태그를 사용하자.  
 시맨틱 태그이용은 접근성 뿐만아니라 seo 최적화에도 중요한 역할을 하게 된다.
 
-HTML5 이전에는 div, span과 같이 콘텐츠 보유 역할은 하지만,
-포함된 콘텐츠의 유형이나 해당 콘텐츠가 페이지에서 수행하는 역할에 대해서는 별도로 표시하지 않는 태그를 사용했다.
-구조를 구분하기 위해 div 태그에 id또는 클래스 등으로 구분하며 구조를 설계했으나,
-HTML5에서는 시맨틱 태그의 등장으로 좀 더 명시적이면서 직관적인 구조의 설계가 가능해진 것 이다.
+HTML5 이전에는 div, span과 같이 콘텐츠 보유 역할은 하지만,  
+포함된 콘텐츠의 유형이나 해당 콘텐츠가 페이지에서 수행하는 역할에 대해서는 별도로 표시하지 않는 태그를 사용했다.  
+구조를 구분하기 위해 div 태그에 id또는 클래스 등으로 구분하며 구조를 설계했으나,  
+HTML5에서는 시맨틱 태그의 등장으로 좀 더 명시적이면서 직관적인 구조의 설계가 가능해진 것 이다.  
 대표적으로 header, footer, section, nav, article 등이 있다.
 
 ![시맨틱-태그](https://github.com/limhoooo/nextjs-blog/assets/24869943/1f80c595-4bdc-46e8-9191-f9bc17dcc91d)
 
 ```
-
 <header> 태그는 문서나 섹션의 머릿글을 지정하며, 로고, 탐색, 제목 및 기타 소개 정보가 포함된 페이지 상단 부분을 정의합니다.
 여기에는 메타 태그 정보, 키워드, 심지어 가져온 CSS 파일이나 스타일 시트도 포함되는 경우가 많습니다.
 
@@ -63,16 +59,15 @@ HTML5에서는 시맨틱 태그의 등장으로 좀 더 명시적이면서 직�
 
 <figcaption> 태그는 <figure> 요소에 대한 캡션을 정의하며, 문서에서 사진의 설명을 추가하기 위해 사용됩니다.
 ‘Caption’이라는 단어 자체가 이미지에 대한 간략한 설명을 의미하는 만큼, <figcaption>은 <figure>에 대한 간략한 설명입니다.
-
 ```
 
-참고(https://seo.tbwakorea.com/blog/what-is-semantic-tag/)
+참고([https://seo.tbwakorea.com/blog/what-is-semantic-tag/](https://seo.tbwakorea.com/blog/what-is-semantic-tag/))
 
-### 2. 대체 텍스트를 제공
+### 2\. 대체 텍스트를 제공
 
 웹사이트에 이미지, 동영상 또는 시각적 콘텐츠를 추가할 때는 반드시 콘텐츠가 묘사하는 내용을 텍스트로 제공해야 한다.  
 HTML에서는 이를 대체 텍스트라고 한다. 이러한 설명은 **스크린 리더** 사용자가 웹사이트의 내용을 이해할 수 있도록 도와준다.  
-<span style="color:#555">스크린 리더란 컴퓨터나 모바일 화면의 텍스트를 TTS를 통해 읽어주는 소프트웨어이다.</span>
+스크린 리더란 컴퓨터나 모바일 화면의 텍스트를 TTS를 통해 읽어주는 소프트웨어이다.
 
 #### alt 속성 넣기
 
@@ -85,7 +80,7 @@ alt속성에 하늘 사진이라는 텍스트를 넣음으로써 사용자는 �
 또한 alt 속성은 SEO 최적화에도 도움이 된다.  
 next.js 의 Image 컴포넌트같은경우 alt 를 필수값으로 지정해줘야할 정도로 중요한 속성 이다.
 
-### 3. WAI-ARIA 이용하기
+### 3\. WAI-ARIA 이용하기
 
 마우스와 같은 포인팅 장비를 사용하기 힘든, 스크린 리더를 사용하는 사용자들에게  
 동적 컨텐츠, javascript, ajax, vue, react 등과 같이 페이지를 새로고침 하지 않고도  
@@ -98,7 +93,7 @@ next.js 의 Image 컴포넌트같은경우 alt 를 필수값으로 지정해줘�
 또한  
 WAI-ARIA는 단순 HTML로 표현할 수 없는 의미들을 태그에 부여하여 시각적인 불편함이 있는  
 사용자들게 일반적인 구조의 HTML에서 필요한 요소에 적절한 정보를 전달받아  
-원활하게 페이지 탐색 및 이용을 하도록 도와준다.
+원활하게 페이지 탐색 및 이용을 하도록 도와준다.  
 WAI-ARIA 는 ARIA States and Properties 속성과 ARIA Roles 속성을 이용하는 두가지 방법이 있다.
 
 #### ARIA States and Properties 이용하기
@@ -113,11 +108,11 @@ WAI-ARIA 는 ARIA States and Properties 속성과 ARIA Roles 속성을 이용하
 해당 요소가 체크박스임을 나타내고 있다.
 
 aria 의 상태 및 속성은 MDN 에서 확인해보자  
-MDN : https://www.w3.org/TR/aria-in-html/#bib-HTML51
+MDN : [https://www.w3.org/TR/aria-in-html/#bib-HTML51](https://www.w3.org/TR/aria-in-html/#bib-HTML51)
 
 #### role 속성 이용하기
 
-role은 말 그대로 해당 태그가 어떤 역할을 수행하는지 알려주는 속성이다.
+role은 말 그대로 해당 태그가 어떤 역할을 수행하는지 알려주는 속성이다.  
 스크린리더를 이용하는 시각장애인들에게 해당요소가 어떤 요소인지 알려주는 속성이다.
 
 ```
@@ -126,21 +121,21 @@ role은 말 그대로 해당 태그가 어떤 역할을 수행하는지 알려�
 </div>
 <div class="tab" role="tab">
   <ul>
-	<li></li>
-	<li></li>
-	<li></li>
+    <li></li>
+    <li></li>
+    <li></li>
   </ul>
 </div>
 ```
 
 role 로 부여할수 있는 속성은 굉장히 많이때문에 아래의 링크에서 확인해보도록 하자  
-MDN : https://www.w3.org/TR/aria-in-html/#bib-HTML51  
-참고 : https://codingeverybody.kr/html-role-%EC%86%8D%EC%84%B1%EC%9D%98-%ED%99%9C%EC%9A%A9-%EB%B0%A9%EB%B2%95/#role-attr-3
+MDN : [https://www.w3.org/TR/aria-in-html/#bib-HTML51](https://www.w3.org/TR/aria-in-html/#bib-HTML51)  
+참고 : [https://codingeverybody.kr/html-role-%EC%86%8D%EC%84%B1%EC%9D%98-%ED%99%9C%EC%9A%A9-%EB%B0%A9%EB%B2%95/#role-attr-3](https://codingeverybody.kr/html-role-%EC%86%8D%EC%84%B1%EC%9D%98-%ED%99%9C%EC%9A%A9-%EB%B0%A9%EB%B2%95/#role-attr-3)
 
-### 4. 접근성을 고려한 색상 및 대비 사용
+### 4\. 접근성을 고려한 색상 및 대비 사용
 
 색상을 컨트롤하는건 대부분 디자이너의 역할이지만 알아둬서 나쁠건 없다고 생각된다.  
 배경과 텍스트의 색상대비 즉 명암비를 확인해야한다.  
 아래의 링크에서 명암대비를 숫자로 확인할수 있는데  
 3점아래로 나와선 안된다.  
-https://webaim.org/resources/contrastchecker/
+[https://webaim.org/resources/contrastchecker/](https://webaim.org/resources/contrastchecker/)
