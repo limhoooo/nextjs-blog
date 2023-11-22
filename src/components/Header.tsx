@@ -13,12 +13,6 @@ const menu = [
 const Header = () => {
   const pathname = usePathname();
   const [menuIndex, setMenuIndex] = useState(0);
-  const aaa = [
-    "translate-x-[0px]",
-    "translate-x-[60px]",
-    "translate-x-[120px]",
-    "translate-x-[180px]",
-  ];
   const menuBoxTranslate = menu.map(
     (_, index) => `translate-x-[${index * 60}px]`
   );
@@ -31,9 +25,9 @@ const Header = () => {
     setMenuIndex(activePathIndex);
   };
 
-  // useEffect(() => {
-  //   findActiveMenu();
-  // }, [pathname]);
+  useEffect(() => {
+    findActiveMenu();
+  }, [pathname]);
 
   return (
     <header className="flex justify-between items-center p-4">
