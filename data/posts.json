@@ -30,5 +30,13 @@
     "category": "JavaScript",
     "path": "react-setstate",
     "featured": true
+  },
+  {
+    "title": "웹 접근성이란?",
+    "description": "웹 접근성에대해 알아보고 왜 지켜야하는지 알아보자",
+    "date": "2023-12-31",
+    "category": "Frontend",
+    "path": "webAccessibility",
+    "featured": true
   }
 ]
