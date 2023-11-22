@@ -13,8 +13,9 @@ export default async function Article() {
         sectionTitle="Article"
         descTitle="두고두고 읽으면 좋을 기술 아티클 모음 📚"
       />
-
-      <TableView tableHeader={tableHeader} tableBody={articles} />
+      <div className="mt-3">
+        <TableView tableHeader={tableHeader} tableBody={articles} />
+      </div>
     </section>
   );
 }

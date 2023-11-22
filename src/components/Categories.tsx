@@ -6,7 +6,7 @@ type Props = {
 };
 export default function Categoires({ categories, selected, onClick }: Props) {
   return (
-    <section className="text-center p-4">
+    <aside className="text-center p-4">
       <h2 className="text-lg font-bold border-b border-sky-500 mb-2">
         Category
       </h2>
@@ -23,6 +23,6 @@ export default function Categoires({ categories, selected, onClick }: Props) {
           </li>
         ))}
       </ul>
-    </section>
+    </aside>
   );
 }

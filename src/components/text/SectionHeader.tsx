@@ -7,7 +7,7 @@ type Props = {
 
 export default function SectionHeader({ sectionTitle, descTitle }: Props) {
   return (
-    <span>
+    <span aria-label="page 상단 title box">
       <h2 className="section-title">{sectionTitle}</h2>
       {descTitle &&
         (typeof descTitle === "string" ? (

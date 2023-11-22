@@ -25,4 +25,7 @@ body::-webkit-scrollbar-thumb {
   .desc-title {
     @apply text-sm text-gray-800 mt-1;
   }
+  .bg-orange {
+    background-color: #f58213;
+  }
 }
