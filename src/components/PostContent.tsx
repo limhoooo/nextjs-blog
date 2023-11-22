@@ -12,8 +12,8 @@ export default function PostContent({ post }: { post: PostData }) {
         <AiTwotoneCalendar />
         <p className="font-semibold ml-2">{date.toString()}</p>
       </div>
-      <h1 className="text-4xl font-bold mb-4">{title}</h1>
-      <p className="text-xl font-bold">{description}</p>
+      <h1 className="text-3xl font-bold mb-4">{title}</h1>
+      <p className="text-lg font-bold">{description}</p>
       <div className="w-44 border-2 border-sky-600 mt-2 mb-8"></div>
       <MarkdownViewer content={content} />
     </section>

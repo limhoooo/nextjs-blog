@@ -16,7 +16,7 @@ const Header = () => {
   const menuBoxTranslate = menu.map(
     (_, index) => `translateX(${index * 60}px)`
   );
-  const activeMenuBoxClass = menuBoxTranslate[menuIndex];
+  const activeMenuBoxClass = { transform: `${menuBoxTranslate[menuIndex]}` };
   const menuHover = (index: number) => {
     setMenuIndex(index);
   };
@@ -30,7 +30,7 @@ const Header = () => {
   }, [pathname]);
 
   return (
-    <header className="flex justify-between items-center p-4">
+    <header className="flex justify-between items-center p-4 max-w-7xl m-auto">
       <h1 className="text-3xl font-bold">
         <Link href="/">Ho Blog</Link>
       </h1>
@@ -46,8 +46,8 @@ const Header = () => {
         </ul>
         <div
           aria-label="active menu bar"
-          className={`w-12 h-1 bg-orange transition `}
-          style={{ transform: `${activeMenuBoxClass}` }}
+          className={`w-12 h-1 bg-orange transition`}
+          style={activeMenuBoxClass}
         ></div>
       </nav>
     </header>
