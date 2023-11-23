@@ -9,12 +9,12 @@ const LINKS = [
     target: "_blank",
     desc: "GitHub 로 이동",
   },
-  {
-    iconPath: "notion_icon",
-    url: "https://few-tarragon-4ce.notion.site/fd8122d6b1ee44fd89016b1bf807d5f2",
-    target: "_blank",
-    desc: "Notion 이력서로 이동",
-  },
+  // {
+  //   iconPath: "notion_icon",
+  //   url: "https://few-tarragon-4ce.notion.site/fd8122d6b1ee44fd89016b1bf807d5f2",
+  //   target: "_blank",
+  //   desc: "Notion 이력서로 이동",
+  // },
   {
     iconPath: "tistory_icon",
     url: "https://limhoooo.tistory.com/",

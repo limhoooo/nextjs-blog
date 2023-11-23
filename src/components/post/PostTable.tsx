@@ -10,19 +10,21 @@ export default function PostTable({
   post: { title, description, date, category, path },
 }: Props) {
   return (
-    <li className="mb-16">
+    <li className="mb-16 group">
       <Link href={`/posts/${path}`}>
         <article className="flex items-center">
           <Image
-            className="h-44 mr-11"
+            className="h-60 mr-11 rounded-lg transition group-hover:-translate-x-1  group-hover:-translate-y-1 group-hover:shadow-xl"
             src={`/images/posts/${path}.png`}
             alt={title}
-            width={176}
-            height={176}
+            width={240}
+            height={240}
           />
           <div>
-            <h3 className="w-full text-xl truncate font-bold mb-3">{title}</h3>
-            <p className="w-full text-sm truncate text-center mb-3">
+            <h3 className="w-full text-3xl truncate font-bold mb-3 transition  group-hover:text-[#3182f6]">
+              {title}
+            </h3>
+            <p className="w-full text-md text-gray-700 truncate text-center mb-3">
               {description}
             </p>
             <span className="text-sm rounded-lg bg-green-100 px-2 my-2">
