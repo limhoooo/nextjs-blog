@@ -1,15 +1,15 @@
-import Hero from "@/components/Hero";
-import FeaturedPosts from "@/components/FeaturedPosts";
-import CarouselPosts from "@/components/CarouselPosts";
-import TistorySection from "@/components/TistorySection";
+import Hero from "@/components/hero/Hero";
+import CarouselPosts from "@/components/section/CarouselPostsSection";
+import TistorySection from "@/components/section/TistorySection";
+import GithubSection from "@/components/section/GithubSection";
 
 export default function HomePage() {
   return (
     <>
       <Hero />
-      {/* <FeaturedPosts /> */}
       <CarouselPosts />
       <TistorySection />
+      <GithubSection />
     </>
   );
 }

@@ -5,8 +5,7 @@ import { usePathname } from "next/navigation";
 import React, { useEffect, useState } from "react";
 
 const menu = [
-  { title: "Home", href: "/", label: "home page로 이동" },
-  { title: "About", href: "/about", label: "about page로 이동" },
+  { title: "About", href: "/", label: "about page로 이동" },
   { title: "Posts", href: "/posts", label: "posts page로 이동" },
   { title: "Article", href: "/article", label: "article page로 이동" },
 ];
@@ -31,10 +30,12 @@ const Header = () => {
 
   return (
     <header className="flex justify-between items-center p-4 max-w-7xl m-auto">
-      <h1 className="text-3xl font-bold">
-        <Link href="/">Ho Blog</Link>
+      <h1 className="text-3xl font-bold" role="banner">
+        <Link href="/" aria-label="클릭시 메인페이지로 이동">
+          Ho Blog
+        </Link>
       </h1>
-      <nav role="navigation" onMouseLeave={findActiveMenu}>
+      <nav onMouseLeave={findActiveMenu}>
         <ul className="flex gap-4">
           {menu.map((menu, index) => (
             <li key={menu.title} onMouseOver={() => menuHover(index)}>
