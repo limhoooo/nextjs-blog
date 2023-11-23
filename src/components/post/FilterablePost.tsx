@@ -7,7 +7,6 @@ import Categoires from "../layout/Categories";
 type Props = {
   posts: Post[];
   categories: string[];
-  children: React.ReactNode;
 };
 
 const ALL_POSTS = "All Posts";
@@ -20,13 +19,13 @@ export default function FilterablePost({ posts, categories }: Props) {
       : posts.filter((post) => post.category === seleted);
 
   return (
-    <section className="flex m-4">
-      <PostsGrid posts={filtered} />
-      <Categoires
+    <div>
+      {/* <Categoires
         categories={[ALL_POSTS, ...categories]}
         selected={seleted}
         onClick={(seleted) => setSelected(seleted)}
-      />
-    </section>
+      /> */}
+      <PostsGrid posts={filtered} />
+    </div>
   );
 }

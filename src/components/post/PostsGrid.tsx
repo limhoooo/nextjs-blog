@@ -1,12 +1,13 @@
 import React from "react";
 import { Post } from "@/service/posts";
 import PostCard from "./PostCard";
+import PostTable from "./PostTable";
 
 export default function PostsGrid({ posts }: { posts: Post[] }) {
   return (
-    <ul className="grid gap-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+    <ul>
       {posts.map((item) => (
-        <PostCard key={item.path} post={item} />
+        <PostTable key={item.path} post={item} />
       ))}
     </ul>
   );

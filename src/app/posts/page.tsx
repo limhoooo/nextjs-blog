@@ -1,4 +1,5 @@
 import FilterablePost from "@/components/post/FilterablePost";
+import SectionHeader from "@/components/text/SectionHeader";
 import { getAllPosts } from "@/service/posts";
 import { Metadata } from "next";
 import React from "react";
@@ -13,9 +14,12 @@ const Posts = async () => {
   const categories = [...new Set(posts.map((post) => post.category))];
 
   return (
-    <FilterablePost posts={posts} categories={categories}>
-      Posts
-    </FilterablePost>
+    <section className="w-[1000px] m-auto">
+      <SectionHeader sectionTitle="Posts" descTitle="기억보단 기록을..📚" />
+      <div className="mt-6">
+        <FilterablePost posts={posts} categories={categories} />
+      </div>
+    </section>
   );
 };
 
