@@ -6,7 +6,9 @@ html,
 body {
   min-height: 100vh;
 }
-
+body {
+  padding-top: 68px;
+}
 body::-webkit-scrollbar {
   width: 10px;
 }
@@ -27,5 +29,13 @@ body::-webkit-scrollbar-thumb {
   }
   .bg-orange {
     background-color: #f58213;
+  }
+  .fixed-custom {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #fff;
+    z-index: 9;
+    box-shadow: rgba(0, 0, 0, 0.08) 0px 0px 15px;
   }
 }

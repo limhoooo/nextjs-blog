@@ -29,28 +29,34 @@ const Header = () => {
   }, [pathname]);
 
   return (
-    <header className="flex justify-between items-center p-4 max-w-7xl m-auto">
-      <h1 className="text-3xl font-bold" role="banner">
-        <Link href="/" aria-label="클릭시 메인페이지로 이동">
-          Ho Blog
-        </Link>
-      </h1>
-      <nav onMouseLeave={findActiveMenu}>
-        <ul className="flex gap-4">
-          {menu.map((menu, index) => (
-            <li key={menu.title} onMouseOver={() => menuHover(index)}>
-              <Link href={menu.href} aria-label={menu.label} role="menuitem">
-                {menu.title}
-              </Link>
-            </li>
-          ))}
-        </ul>
-        <div
-          aria-label="active menu bar"
-          className={`w-12 h-1 bg-orange transition`}
-          style={activeMenuBoxClass}
-        ></div>
-      </nav>
+    <header className="fixed-custom">
+      <div className="flex justify-between items-center p-4 max-w-7xl m-auto">
+        <h1 className="text-3xl font-bold" role="banner">
+          <Link href="/" aria-label="클릭시 메인페이지로 이동">
+            Ho Blog
+          </Link>
+        </h1>
+        <nav onMouseLeave={findActiveMenu}>
+          <ul className="flex gap-4">
+            {menu.map((menu, index) => (
+              <li
+                key={menu.title}
+                className="w-11"
+                onMouseOver={() => menuHover(index)}
+              >
+                <Link href={menu.href} aria-label={menu.label} role="menuitem">
+                  {menu.title}
+                </Link>
+              </li>
+            ))}
+          </ul>
+          <div
+            aria-label="active menu bar"
+            className={`w-12 h-1 bg-orange transition`}
+            style={activeMenuBoxClass}
+          ></div>
+        </nav>
+      </div>
     </header>
   );
 };
