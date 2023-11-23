@@ -3,6 +3,7 @@ import { Open_Sans } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
+import ProgressBar from "@/components/progressBar/ProgressBar";
 
 const sans = Open_Sans({ subsets: ["latin"], display: "swap" });
 
@@ -28,6 +29,7 @@ export default function RootLayout({
         <Header />
         <main className="grow max-w-screen-xl flex flex-col mx-auto p-4 pb-24">
           {children}
+          <ProgressBar />
         </main>
         <Footer />
       </body>
