@@ -69,7 +69,7 @@ export default class Fetch {
       const parsedUrl = this.baseUrl ? this.baseUrl + url : url;
       const response = await fetch(parsedUrl, options);
       if (!response.ok) {
-        return this.handleResponse<T>({
+        return this.handleResponse({
           status: "fail",
           statusCode: response.status,
         });

@@ -1,7 +1,7 @@
 import Utterances from "@/components/github/Utterances";
 import AdjacentPostCard from "@/components/post/AdjacentPostCard";
 import PostContent from "@/components/post/PostContent";
-import { PostData, postApi } from "@/service/api/posts";
+import { Post, PostData, postApi } from "@/service/api/posts";
 import Image from "next/image";
 import React from "react";
 type Props = {
@@ -12,23 +12,19 @@ type Props = {
 
 export async function generateMetadata({ params: { slug } }: Props) {
   const { response } = await postApi.getPost({ params: slug });
-  if (response) {
-    const { title, description } = response;
-    return {
-      title,
-      description,
-    };
-  }
+  const { title, description } = response as PostData;
+  return {
+    title,
+    description,
+  };
 }
 
 export async function generateStaticParams() {
-  const { response: posts } = await postApi.getAllPosts();
-  return (
-    posts &&
-    posts.map((post) => ({
-      slug: post.path,
-    }))
-  );
+  const { response } = await postApi.getAllPosts();
+  const posts = response as Post[];
+  return posts.map((post) => ({
+    slug: post.path,
+  }));
 }
 
 export default async function PostPage({ params: { slug } }: Props) {
