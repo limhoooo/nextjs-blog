@@ -21,6 +21,10 @@ export async function generateMetadata({ params: { slug } }: Props) {
 
 export async function generateStaticParams() {
   const { response } = await postApi.getAllPosts();
+  if (!response) {
+    console.error("Error fetching posts:", response);
+    return [];
+  }
   const posts = response as Post[];
   return posts.map((post) => ({
     slug: post.path,
