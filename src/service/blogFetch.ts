@@ -4,4 +4,4 @@ export const blogApi = new Fetch();
 blogApi.setHeaders({
   "Content-Type": "application/json; charset=utf-8",
 });
-blogApi.setBaseUrl("https://limhoooo-nextjs-blog.vercel.app/");
+blogApi.setBaseUrl(String(process.env.NEXT_PUBLIC_BASE_URL));
