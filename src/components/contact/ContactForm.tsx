@@ -1,7 +1,7 @@
 "use client";
 import React, { ChangeEvent, FormEvent, useState } from "react";
 import Banner, { BannerData } from "./Banner";
-import { sendContactEmail } from "@/service/contact";
+import { sendContactEmail } from "@/service/email/contact";
 
 type Form = {
   from: string;

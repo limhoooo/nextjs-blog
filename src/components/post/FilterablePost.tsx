@@ -1,5 +1,5 @@
 "use client";
-import { Post } from "@/service/posts";
+import { Post } from "@/service/api/posts";
 import React, { useState } from "react";
 import PostsGrid from "./PostsGrid";
 import Categoires from "../layout/Categories";

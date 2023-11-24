@@ -1,11 +1,11 @@
 import TableView from "@/components/table/TableView";
 import SectionHeader from "@/components/text/SectionHeader";
-import { getArticle } from "@/service/article";
+import { articleApi } from "@/service/api/article";
 import React from "react";
 
 const tableHeader = ["No", "Title", "Summary", "Tags"];
 export default async function Article() {
-  const articles = await getArticle();
+  const { response: articles } = await articleApi.getAllArticle();
 
   return (
     <section>
@@ -14,7 +14,9 @@ export default async function Article() {
         descTitle="두고두고 읽으면 좋을 기술 아티클 모음 📚"
       />
       <div className="mt-3">
-        <TableView tableHeader={tableHeader} tableBody={articles} />
+        {articles && (
+          <TableView tableHeader={tableHeader} tableBody={articles} />
+        )}
       </div>
     </section>
   );

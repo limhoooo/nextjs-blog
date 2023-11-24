@@ -1,11 +1,11 @@
-import { getAllPosts } from "@/service/posts";
+import { postApi } from "@/service/api/posts";
 import React from "react";
 import PostCard from "../post/PostCard";
 import MultiCarousel from "../carousel/MultiCarousel";
 import SectionHeader from "../text/SectionHeader";
 
 export default async function CarouselPosts() {
-  const posts = await getAllPosts();
+  const { response: posts } = await postApi.getAllPosts();
 
   return (
     <article className="my-4">
@@ -15,9 +15,7 @@ export default async function CarouselPosts() {
         moveLink="posts"
       />
       <MultiCarousel>
-        {posts.map((post) => (
-          <PostCard key={post.path} post={post} />
-        ))}
+        {posts && posts.map((post) => <PostCard key={post.path} post={post} />)}
       </MultiCarousel>
     </article>
   );

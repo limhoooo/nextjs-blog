@@ -41,10 +41,11 @@ const Header = () => {
             {menu.map((menu, index) => (
               <li
                 key={menu.title}
+                role="menuitem"
                 className="w-11"
                 onMouseOver={() => menuHover(index)}
               >
-                <Link href={menu.href} aria-label={menu.label} role="menuitem">
+                <Link href={menu.href} aria-label={menu.label}>
                   {menu.title}
                 </Link>
               </li>

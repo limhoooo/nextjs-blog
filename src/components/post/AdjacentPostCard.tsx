@@ -1,4 +1,4 @@
-import { Post } from "@/service/posts";
+import { Post } from "@/service/api/posts";
 import Image from "next/image";
 import Link from "next/link";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";

@@ -1,5 +1,5 @@
 import React from "react";
-import { Post } from "@/service/posts";
+import { Post } from "@/service/api/posts";
 import PostCard from "./PostCard";
 import PostTable from "./PostTable";
 
