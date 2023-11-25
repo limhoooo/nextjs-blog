@@ -2,7 +2,7 @@
   {
     "title": "Flux 패턴이란?",
     "description": "Flux 패턴이용한 Redux를 구현해보자 (Vanilla jS, React js)",
-    "date": "2023-12-31",
+    "date": "2023-11-10",
     "category": "Frontend",
     "path": "flux",
     "featured": true
@@ -10,7 +10,7 @@
   {
     "title": "iterable 이란?",
     "description": "iterable, iterator 에 대해서 알아보자",
-    "date": "2023-12-31",
+    "date": "2023-08-02",
     "category": "JavaScript",
     "path": "iterable",
     "featured": true
@@ -18,7 +18,7 @@
   {
     "title": "React setState는 비동기이다",
     "description": "React setState가 왜 비동기인지 어떤식으로 구성되어있는지 알아보자",
-    "date": "2023-12-31",
+    "date": "2023-11-12",
     "category": "JavaScript",
     "path": "react-setstate",
     "featured": true
@@ -26,7 +26,7 @@
   {
     "title": "웹 접근성이란?",
     "description": "웹 접근성에대해 알아보고 왜 지켜야하는지 알아보자",
-    "date": "2023-12-31",
+    "date": "2023-11-22",
     "category": "Frontend",
     "path": "webAccessibility",
     "featured": true
