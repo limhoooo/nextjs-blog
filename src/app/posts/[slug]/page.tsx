@@ -20,7 +20,7 @@ export async function generateMetadata({ params: { slug } }: Props) {
 }
 
 export async function generateStaticParams() {
-  const { response } = await postApi.getAllPosts();
+  const { response } = await postApi.getAllPosts({ params: undefined });
   if (!response) {
     console.error("Error fetching posts:", response);
     return [];

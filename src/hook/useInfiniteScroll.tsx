@@ -8,8 +8,6 @@ export default function useInfiniteScroll(fetchCallback: Function) {
   const [isFetching, setIsFetching] = useState(false);
 
   const handleScroll = throttle(() => {
-    console.log("asd");
-
     if (
       window.innerHeight + document.documentElement.scrollTop >=
       document.documentElement.offsetHeight

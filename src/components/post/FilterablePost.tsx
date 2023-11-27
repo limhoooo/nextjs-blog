@@ -33,7 +33,6 @@ export default function FilterablePost() {
 
   return (
     <div onScroll={getAllposts}>
-      <button onClick={getAllposts}>getAllposts</button>
       {/* <Categoires
         categories={[ALL_POSTS, ...categories]}
         selected={seleted}
