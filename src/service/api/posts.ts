@@ -21,11 +21,12 @@ type ReqPrams = {
   reqOptions?: Options;
 };
 type PostApi = {
-  getAllPosts: () => Promise<FetchResponse<Post[]>>;
+  getAllPosts: ({ params }: ReqPrams) => Promise<FetchResponse<Post[]>>;
   getPost: ({ params }: ReqPrams) => Promise<FetchResponse<PostData>>;
 };
 
 export const postApi: PostApi = {
-  getAllPosts: () => blogApi.get({ url: "api/post/all-posts" }),
+  getAllPosts: (params) =>
+    blogApi.get({ url: "api/post/all-posts/", params: params?.params }),
   getPost: ({ params }) => blogApi.get({ url: "api/post", params }),
 };

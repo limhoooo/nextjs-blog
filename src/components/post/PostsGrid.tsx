@@ -6,8 +6,8 @@ import PostTable from "./PostTable";
 export default function PostsGrid({ posts }: { posts: Post[] }) {
   return (
     <ul>
-      {posts.map((item) => (
-        <PostTable key={item.path} post={item} />
+      {posts.map((item, index) => (
+        <PostTable key={index} post={item} />
       ))}
     </ul>
   );
