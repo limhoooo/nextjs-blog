@@ -26,5 +26,19 @@
     "summary": "기술 블로그를 운영하는 5가지 노하우에 대해서 공유합니다.",
     "link": "https://yozm.wishket.com/magazine/detail/2134/",
     "tags": "ETC"
+  },
+  {
+    "no": 5,
+    "title": "만들어 가며 알아보는 React: React는 왜 성공했나",
+    "summary": "jQuery 가 몰락하고 React 가 성공하게된 이유를 공유합니다.",
+    "link": "https://techblog.woowahan.com/8311/?fbclid=IwAR1Jz6HEffNrDZuj3SBc5J-fCHw6PuOK7d5Uywi6V5fcng2Ijpowck__ofo",
+    "tags": "FrontEnd"
+  },
+  {
+    "no": 6,
+    "title": "무조건 스켈레톤 화면을 보여주는게 사용자 경험에 도움이 될까요?",
+    "summary": "응답이 느리지 않은 화면에서도 Progress Indicator 을 활용해야하는가에 대한 고찰이 담긴 아티클입니다.",
+    "link": "https://tech.kakaopay.com/post/skeleton-ui-idea/",
+    "tags": "FrontEnd"
   }
 ]
