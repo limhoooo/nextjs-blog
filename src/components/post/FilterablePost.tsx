@@ -9,13 +9,14 @@ const ALL_POSTS = "All Posts";
 export default function FilterablePost() {
   const [posts, setPosts] = useState<Post[]>();
   const [seleted, setSelected] = useState(ALL_POSTS);
-
+  const [loading, setLoading] = useState(true);
   const getAllposts = useCallback(async () => {
     const postsLength = posts ? posts.length : 0;
     const { response } = await postApi.getAllPosts({
       params: { count: postsLength },
     });
     setPosts(response);
+    setLoading(false);
   }, [posts]);
 
   useInfiniteScroll(getAllposts);
@@ -38,6 +39,8 @@ export default function FilterablePost() {
         selected={seleted}
         onClick={(seleted) => setSelected(seleted)}
       /> */}
+
+      {loading && <div className="loding"></div>}
       {filtered && <PostsGrid posts={filtered} />}
     </div>
   );
