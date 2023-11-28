@@ -5,7 +5,9 @@ import MultiCarousel from "../carousel/MultiCarousel";
 import SectionHeader from "../text/SectionHeader";
 
 export default async function CarouselPosts() {
-  const { response: posts } = await postApi.getAllPosts({ params: undefined });
+  const { response: posts } = await postApi.getAllPosts({
+    params: { count: 0 },
+  });
 
   return (
     <article className="my-4">
