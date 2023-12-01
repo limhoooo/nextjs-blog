@@ -8,7 +8,7 @@ import useInfiniteScroll from "@/hook/useInfiniteScroll";
 const ALL_POSTS = "All Posts";
 export default function FilterablePost() {
   const [posts, setPosts] = useState<Post[]>();
-  const [seleted, setSelected] = useState(ALL_POSTS);
+  // const [seleted, setSelected] = useState(ALL_POSTS);
   const [loading, setLoading] = useState(true);
   const getAllposts = useCallback(async () => {
     const postsLength = posts ? posts.length : 0;
@@ -25,15 +25,15 @@ export default function FilterablePost() {
     getAllposts();
   }, []);
 
-  const categories = [...new Set(posts?.map((post) => post.category))];
+  // const categories = [...new Set(posts?.map((post) => post.category))];
 
-  const filtered =
-    seleted === ALL_POSTS
-      ? posts
-      : posts?.filter((post) => post.category === seleted);
+  // const filtered =
+  //   seleted === ALL_POSTS
+  //     ? posts
+  //     : posts?.filter((post) => post.category === seleted);
 
   return (
-    <div onScroll={getAllposts}>
+    <section>
       {/* <Categoires
         categories={[ALL_POSTS, ...categories]}
         selected={seleted}
@@ -41,7 +41,8 @@ export default function FilterablePost() {
       /> */}
 
       {loading && <div className="loding"></div>}
-      {filtered && <PostsGrid posts={filtered} />}
-    </div>
+      {posts && <PostsGrid posts={posts} />}
+      {/* {filtered && <PostsGrid posts={filtered} />} */}
+    </section>
   );
 }
