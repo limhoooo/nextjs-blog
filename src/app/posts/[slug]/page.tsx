@@ -35,7 +35,7 @@ export default async function PostPage({ params: { slug } }: Props) {
   const { response: post } = await postApi.getPost({ params: slug });
   const { next, prev } = post as PostData;
   return (
-    <article className="rounded-2xl overflow-hidden w-[650px] m-auto  m-4 ">
+    <article className="rounded-2xl overflow-hidden w-[650px] m-auto  m-4 max-md:w-full">
       {post && <PostContent post={post} />}
       <Utterances />
       <section className="flex shadow-md overflow-hidden">

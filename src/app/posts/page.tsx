@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 
 const Posts = async () => {
   return (
-    <section className="w-[1000px] m-auto">
+    <section className="w-[1000px] m-auto max-md:w-full">
       <SectionHeader sectionTitle="Posts" descTitle="기억보단 기록을..📚" />
       <div className="mt-6">
         <FilterablePost />

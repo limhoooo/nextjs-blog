@@ -12,9 +12,9 @@ export default function PostTable({
   return (
     <li className="mb-16 group">
       <Link href={`/posts/${path}`}>
-        <article className="flex items-center">
+        <article className="flex items-center max-md:block max-md:text-center">
           <Image
-            className="h-60 mr-11 rounded-lg transition group-hover:-translate-x-1  group-hover:-translate-y-1 group-hover:shadow-xl"
+            className="h-60 mr-11 rounded-lg transition group-hover:-translate-x-1  group-hover:-translate-y-1 group-hover:shadow-xl max-md:m-auto max-md:mb-4"
             src={`/images/posts/${path}.png`}
             alt={title}
             width={240}
