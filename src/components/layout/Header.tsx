@@ -23,7 +23,6 @@ const Header = () => {
     const activePathIndex = menu.findIndex((item) => item.href === pathname);
     setMenuIndex(activePathIndex);
   };
-
   useEffect(() => {
     findActiveMenu();
   }, [pathname]);
