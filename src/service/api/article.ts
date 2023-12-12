@@ -16,6 +16,5 @@ export const articleApi: ArticleApi = {
   getAllArticle: () =>
     blogApi.get({
       url: "api/article/all-article",
-      reqOptions: { cache: "no-cache" },
     }),
 };
