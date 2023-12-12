@@ -6,8 +6,6 @@ import React from "react";
 const tableHeader = ["No", "Title", "Summary", "Tags"];
 export default async function Article() {
   const { response: articles } = await articleApi.getAllArticle();
-  console.log(articles);
-
   return (
     <section>
       <SectionHeader

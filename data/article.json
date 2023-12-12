@@ -40,5 +40,12 @@
     "summary": "응답이 느리지 않은 화면에서도 Progress Indicator 을 활용해야하는가에 대한 고찰이 담긴 아티클입니다.",
     "link": "https://tech.kakaopay.com/post/skeleton-ui-idea/",
     "tags": "FrontEnd"
+  },
+  {
+    "no": 7,
+    "title": "(번역) 자바스크립트 웹 프레임워크의 새로운 흐름",
+    "summary": "자바스크립트의 변천사 및 현재 웹에 흐름에 대한 아티클 입니다.",
+    "link": "https://ykss.netlify.app/translation/the_new_wave_of_javascript_web_frameworks/?utm_source=substack&utm_medium=email",
+    "tags": "FrontEnd"
   }
 ]
