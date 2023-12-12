@@ -6,12 +6,13 @@ import React from "react";
 const tableHeader = ["No", "Title", "Summary", "Tags"];
 export default async function Article() {
   const { response: articles } = await articleApi.getAllArticle();
+  console.log(articles);
 
   return (
     <section>
       <SectionHeader
         sectionTitle="Article"
-        descTitle="두고두고 읽으면 좋을 기술 아티클 모음 📚"
+        descTitle="두고두고 읽으면 좋을 기술 아1티클 모음 📚"
       />
       <div className="mt-3">
         {articles && (
