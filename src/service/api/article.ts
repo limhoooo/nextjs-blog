@@ -13,5 +13,8 @@ type ArticleApi = {
 };
 
 export const articleApi: ArticleApi = {
-  getAllArticle: () => blogApi.get({ url: "api/article/all-article" }),
+  getAllArticle: () =>
+    blogApi.get({
+      url: "api/article/all-article",
+    }),
 };
