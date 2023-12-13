@@ -27,7 +27,7 @@ export default function RootLayout({
     <html lang="en" className={sans.className}>
       <body className=" w-full relative">
         <Header />
-        <main className="grow max-w-screen-xl flex flex-col mx-auto p-4 pb-24">
+        <main className="grow max-w-screen-lg flex flex-col mx-auto p-4 pb-24">
           {children}
           <ProgressBar />
         </main>

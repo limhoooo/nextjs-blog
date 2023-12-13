@@ -29,7 +29,7 @@ const Header = () => {
 
   return (
     <header className="fixed-custom">
-      <div className="flex justify-between items-center p-4 max-w-7xl m-auto">
+      <div className="flex justify-between items-center p-4 max-w-5xl m-auto">
         <h1 className="text-3xl font-bold" role="banner">
           <Link href="/" aria-label="클릭시 메인페이지로 이동">
             Ho Blog

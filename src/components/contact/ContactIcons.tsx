@@ -21,12 +21,12 @@ const LINKS = [
     target: "_blank",
     desc: "Tistory 로 이동",
   },
-  {
-    iconPath: "gmail_icon",
-    url: "/contact",
-    target: "",
-    desc: "메일쓰기로 이동",
-  },
+  // {
+  //   iconPath: "gmail_icon",
+  //   url: "/contact",
+  //   target: "",
+  //   desc: "메일쓰기로 이동",
+  // },
 ];
 
 export default function ContactIcons() {
