@@ -10,7 +10,7 @@ export default async function Article() {
     <section>
       <SectionHeader
         sectionTitle="Article"
-        descTitle="두고두고 읽으면 좋을 기술 아1티클 모음 📚"
+        descTitle="두고두고 읽으면 좋을 기술 아티클 모음 📚"
       />
       <div className="mt-3">
         {articles && (
